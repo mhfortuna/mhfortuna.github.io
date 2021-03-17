@@ -1,3 +1,17 @@
-*{
+body{
     font-family: 'Quicksand', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+.footer-temporal{
+    display: flex;
+    justify-content: center;
+}
+.p-temporal{
+    text-align: center;
+    margin: 5% 0;
+}
+.logo-mid {
+    width: 200px;
 }
