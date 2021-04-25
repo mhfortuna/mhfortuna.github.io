@@ -49,6 +49,7 @@ html {
 main {
   padding: 0px 0.33rem;
   counter-reset: line;
+  overflow-x: hidden;
 }
 .flex-row {
   display: flex;
@@ -244,7 +245,7 @@ pre span.count:before {
 }
 
 .hidden {
-  height: 0px;
+  height: 0px !important;
   overflow: hidden;
   opacity: 0;
   backdrop-filter: blur(0px);
@@ -344,21 +345,26 @@ code {
   html {
     font-size: 12px;
   }
+  .flex-row {
+    width: 100%;
+  }
   body {
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   .terminal-window {
     height: fit-content;
     height: -moz-fit-content;
     width: 100%;
     margin-bottom: 0.8rem;
+    overflow-x: hidden;
   }
   .console-window {
     order: -1;
-    height: 50vh;
+    height: fit-content;
   }
   .console {
-    height: calc(100% - 28px);
+    height: 50vh;
   }
   .modal-content {
     width: calc(100vw - 3rem);
