@@ -21,17 +21,18 @@ header {
   background-color: var(--darkAccent);
   font-family: "Lexend", sans-serif;
   color: var(--myLinen);
-  padding: 0px 5px;
+  padding: 0px 0.33rem;
   height: fit-content;
+  height: -moz-fit-content;
 }
 .tab {
-  padding: 10px;
+  padding: 0.6rem;
   background-color: var(--backgroundColor);
   font-weight: lighter;
   border-style: solid solid none solid;
   border-color: rgba(0, 0, 0, 0.384);
   border-width: 1px;
-  margin-top: 5px;
+  margin-top: 0.33rem;
   display: inline-block;
 }
 
@@ -46,12 +47,10 @@ html {
   font-size: 14px;
 }
 main {
-  padding: 0px 5px;
+  padding: 0px 0.33rem;
   counter-reset: line;
-  /*   display: flex;
-  flex-wrap: wrap; */
 }
-.left-side {
+.flex-row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -61,11 +60,11 @@ main {
 /* IDE-like windows ----------------------------- */
 .terminal-window {
   background: var(--backgroundColor);
-  padding: 5px;
-  /* border-radius: 5px; */
+  padding: 0.33rem;
   border: rgba(0, 0, 0, 0.384) 1px solid;
   border-top: none;
   height: fit-content;
+  height: -moz-fit-content;
   width: 31vw;
   margin-bottom: 0.8rem;
 }
@@ -73,7 +72,7 @@ main {
   background-color: var(--grayAccent);
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 5px;
+  padding: 0.33rem;
 }
 /* IDE like pre-numbering ---------------------------------------- */
 pre {
@@ -115,12 +114,10 @@ pre span {
   animation-timing-function: steps(2, start);
 }
 .code-highlight {
-  /* font-weight: 600; */
   background-color: var(--darkAccent);
   line-height: 1.8rem;
   text-align: center;
-  font-weight: bold;
-  /*   border-bottom: 1px var(--myPink) dashed; */
+  /*  font-weight: bold; */
 }
 pre span.count:before {
   counter-increment: line;
@@ -136,16 +133,16 @@ pre span.count:before {
 
 /* Mac Console mock -------------------------------------  */
 .console {
-  padding: 10px;
+  padding: 0.7rem;
   font-family: "Fira Mono", monospace;
-  width: calc(100% - 20px);
+  width: calc(100% - 1.3rem);
   height: 80vh;
   background-color: #1e1e1e;
   color: var(--myYellow);
   display: inline-flex;
   flex-direction: column;
   position: relative;
-  border-radius: 5px;
+  border-radius: 0.33rem;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
     0 2px 4px -1px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
@@ -177,8 +174,8 @@ pre span.count:before {
   content: "_";
   -webkit-animation: cursor-blink 1s linear 1s infinite;
   animation: cursor-blink 1s linear 1s infinite;
-  width: 8px;
-  height: 18px;
+  width: 0.6rem;
+  height: 1.3rem;
   margin-left: 1px;
   background: #fec041;
 }
@@ -223,7 +220,7 @@ pre span.count:before {
   color: var(--myRed);
 }
 .tryIt:hover {
-  transform: translateX(10px);
+  transform: translateX(0.7rem);
 }
 /* General use style ------------------------------ */
 .hide {
@@ -237,8 +234,8 @@ pre span.count:before {
   z-index: 1;
   left: 0px;
   top: 0px;
-  height: 100vh;
-  width: 100vw;
+  height: 150vh;
+  width: 150vw;
   background-color: rgba(0, 0, 0, 0.4);
   transition: opacity 0.4s, background-color 0.4s 0.2s,
     backdrop-filter 0.8s 0.2s;
@@ -259,36 +256,38 @@ pre span.count:before {
   display: flex;
   flex-direction: column;
   width: fit-content;
+  width: -moz-fit-content;
   height: fit-content;
+  height: -moz-fit-content;
   background-color: var(--backgroundColor);
   color: var(--myPink);
   margin: 20vh auto;
-  padding: 20px;
+  padding: 1rem;
   border: 1px solid var(--darkestGray);
-  border-radius: 5px;
+  border-radius: 0.33rem;
   position: relative;
   z-index: 2;
   border-top: 28px solid var(--myPink);
 }
 .two-columns {
-  width: 500px;
+  width: 500px; //TODO
 }
 .two-columns > * {
-  margin: 10px 0;
+  margin: 0.7rem 0;
 }
 .flex-column {
   display: flex;
   flex-direction: row;
 }
 .demo {
-  height: 200px;
-  width: 300px;
+  height: 14.3rem;
+  width: 21.5rem;
   position: relative;
 }
 .demo-code {
   background-color: var(--darkAccent);
   padding: 0.5rem;
-  height: 150px;
+  height: 10.7rem;
   width: 90%;
 }
 code {
@@ -323,8 +322,8 @@ code {
   background-color: var(--myPink);
   color: var(--darkAccent);
   border: none;
-  padding: 4px;
-  border-radius: 2px;
+  padding: 0.3rem;
+  border-radius: 0.14rem;
   font-size: 1.3rem;
   cursor: pointer;
   transition: transform 0.2s;
@@ -339,4 +338,43 @@ code {
   transform: none !important;
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 12px;
+  }
+  body {
+    overflow: auto;
+  }
+  .terminal-window {
+    height: fit-content;
+    height: -moz-fit-content;
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+  .console-window {
+    order: -1;
+    height: 50vh;
+  }
+  .console {
+    height: calc(100% - 28px);
+  }
+  .modal-content {
+    width: calc(100vw - 3rem);
+    margin: 5vh 0.5rem;
+  }
+  .flex-column {
+    flex-wrap: wrap;
+  }
+  .demo-code {
+    overflow: auto;
+    height: 12vh;
+  }
+  .demo {
+    height: 12vh;
+  }
+  .two-columns {
+    width: 95vw;
+  }
 }

@@ -63,7 +63,7 @@ function typeLine(line, index, tag) {
   if (line.length > index) {
     setTimeout(function () {
       typeLine(line, index + 1, tag);
-    }, randomWait(20, 35)); //TODO change time to slower
+    }, randomWait(5, 25)); //TODO change time to slower
   } else {
     elem.innerHTML = elem.innerHTML.substring(
       0,
