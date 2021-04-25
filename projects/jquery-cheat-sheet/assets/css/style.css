@@ -14,6 +14,12 @@
   padding: 0px;
   margin: 0px;
   /* outline: 1px white solid; */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 /* Header section ------------------------------------- */
 
@@ -171,6 +177,15 @@ pre span.count:before {
 .console p::before {
   content: ">";
 }
+#console-text-input,
+code {
+  -webkit-touch-callout: text;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
 #console-text-input:after {
   content: "_";
   -webkit-animation: cursor-blink 1s linear 1s infinite;
@@ -271,7 +286,7 @@ pre span.count:before {
   border-top: 28px solid var(--myPink);
 }
 .two-columns {
-  width: 500px; //TODO
+  width: 500px;
 }
 .two-columns > * {
   margin: 0.7rem 0;

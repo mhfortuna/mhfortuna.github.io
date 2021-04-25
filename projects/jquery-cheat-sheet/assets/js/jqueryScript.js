@@ -28,8 +28,8 @@ function jqueryListItems(tag) {
       line += `It's also possible tu use the negation on values like $(".class[attribute!='value']")`;
       break;
     case 5:
-      line += `To execute a function when the HTML has loaded you can use $(document).ready(handler) but it is deprecated.~`;
-      line += `The correct way is $(window).on("load", handler )`;
+      line += `To execute a function when the HTML has loaded you can use $(document).ready(handler) or $(window).on("load", handler ) but they are deprecated.~`;
+      line += `The correct way is $( handler ) ...it's a strange notation`;
       break;
     case 6:
       line += `To add an event when an element was clicked you can use ¿.on("click", handler)`;
