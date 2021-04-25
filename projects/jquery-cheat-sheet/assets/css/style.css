@@ -234,8 +234,8 @@ pre span.count:before {
   z-index: 1;
   left: 0px;
   top: 0px;
-  height: 150vh;
-  width: 150vw;
+  height: 100vh;
+  width: 100vw;
   background-color: rgba(0, 0, 0, 0.4);
   transition: opacity 0.4s, background-color 0.4s 0.2s,
     backdrop-filter 0.8s 0.2s;
@@ -376,5 +376,9 @@ code {
   }
   .two-columns {
     width: 95vw;
+  }
+  .modal-background {
+    height: 150vh;
+    width: 150vw;
   }
 }

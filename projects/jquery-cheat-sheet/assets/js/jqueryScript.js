@@ -313,7 +313,7 @@ function jqueryImplementation(tag) {
         $("#parent1 img").on("load", function () {
           $("#parent1 p").text("Image has loaded");
         });
-        $("#parent1 img").prop("src", "/assets/img/logo.png");
+        $("#parent1 img").prop("src", "./assets/img/logo.png");
         button.prop("disabled", true);
       });
       break;
@@ -326,7 +326,7 @@ function jqueryImplementation(tag) {
         $("#parent1 img").on("error", function () {
           $("#parent1 p").text("Image has failed to load");
         });
-        $("#parent1 img").prop("src", "/assets/img/logo");
+        $("#parent1 img").prop("src", "./assets/img/logo");
         button.prop("disabled", true);
       });
 

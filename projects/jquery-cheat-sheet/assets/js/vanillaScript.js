@@ -327,7 +327,7 @@ function vanillaImplementation(tag) {
             document.querySelector("#parent2 p").textContent =
               "Image has loaded";
           });
-        document.querySelector("#parent2 img").src = "/assets/img/logo.png";
+        document.querySelector("#parent2 img").src = "./assets/img/logo.png";
         button.disabled = true;
       });
       break;
@@ -346,7 +346,7 @@ function vanillaImplementation(tag) {
             document.querySelector("#parent2 p").textContent =
               "Image has failed to load";
           });
-        document.querySelector("#parent2 img").src = "/assets/img/logo";
+        document.querySelector("#parent2 img").src = "./assets/img/logo";
         button.disabled = true;
       });
 
