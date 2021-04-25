@@ -34,41 +34,35 @@ Function to animate text in console.
 */
 function typeLine(line, index, tag) {
   consoleIsWriting = true;
-  const elem = document.getElementById("console-text-input");
+  const elem = $("#console-text-input");
   const CURSOR = "";
   index = index != null ? index : 0;
-  let content = elem.innerHTML.substring(
-    0,
-    elem.innerHTML.length - CURSOR.length
-  );
+  let content = elem.html().substring(0, elem.html().length - CURSOR.length);
   let char = line.charAt(index);
   if (char === "¿") {
-    //char for italic element keyword
-    elem.innerHTML = content + "<i>jQueryElement</i>" + CURSOR;
+    elem.html(content + "<i>jQueryElement</i>" + CURSOR);
   } else if (char === "ç") {
-    elem.innerHTML = content + "<i>Element</i>" + CURSOR;
+    elem.html(content + "<i>Element</i>" + CURSOR);
   } else if (char === "~") {
-    elem.innerHTML = content + "<br><br>" + ">" + CURSOR;
+    elem.html(content + "<br><br>" + ">" + CURSOR);
   } else if (char === "¡") {
-    elem.innerHTML =
+    elem.html(
       content +
-      "<p class='tryIt' onclick='tryIt(" +
-      tag +
-      ")'>-------+<br> |TRY IT!|<br> +-------+<br><p>" +
-      CURSOR;
+        "<p class='tryIt' onclick='tryIt(" +
+        tag +
+        ")'>-------+<br> |TRY IT!|<br> +-------+<br><p>" +
+        CURSOR
+    );
   } else {
-    elem.innerHTML = content + char + CURSOR;
+    elem.html(content + char + CURSOR);
   }
-  elem.scrollTop = elem.scrollHeight - elem.clientHeight;
+  elem.scrollTop(elem.prop("scrollHeight") - elem.height());
   if (line.length > index) {
     setTimeout(function () {
       typeLine(line, index + 1, tag);
     }, randomWait(5, 25)); //TODO change time to slower
   } else {
-    elem.innerHTML = elem.innerHTML.substring(
-      0,
-      elem.innerHTML.length - CURSOR.length
-    );
+    elem.html(elem.html().substring(0, elem.html().length - CURSOR.length));
     consoleIsWriting = false;
   }
 }
