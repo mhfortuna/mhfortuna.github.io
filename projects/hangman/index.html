@@ -7,9 +7,23 @@
     <title>Hangman</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
     <link rel="manifest" href="./site.webmanifest" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
@@ -21,13 +35,26 @@
       integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
       crossorigin="anonymous"
     />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-W6W5NBH4BG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-W6W5NBH4BG");
+    </script>
   </head>
   <body>
     <div class="speaker" onclick="speakerClick()">
       <i class="fas fa-volume-up" id="speaker"></i>
     </div>
     <main class="main-flex">
-    
       <div class="mainGame-container">
         <div id="start-container" class="start-game-screen">
           <div class="startEnd-container">
@@ -48,7 +75,12 @@
                 placeholder="Choose a username"
                 maxlength="8"
               />
-              <input type="submit" name="startbtn" id="startbtn" value="START" />
+              <input
+                type="submit"
+                name="startbtn"
+                id="startbtn"
+                value="START"
+              />
             </form>
           </div>
         </div>
